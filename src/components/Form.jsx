@@ -98,19 +98,19 @@ let Form = () => {
             Phone Number: ${countryCallingCode} ${phoneNumber}<br>
             Price Range: From $120K USD to $ ${priceRange}K USD<br>
             `;
-            Email.send({
-              Host: "smtp.elasticemail.com",
-              Username: "team.creativemonk@gmail.com",
-              Password: "D1A332CCE6789B22FA17D1DE4F5E4FCB4C52",
-              To: "team.creativemonk@gmail.com",
-              From: "team.creativemonk@gmail.com",
-              Subject: `Query from ${name}`,
-              Body: emailBody,
-            }).then(() => {
-              setShowLoading(false);
-              setFormSubmitted(true);
-              navigate("/message");
-            });
+            // Email.send({
+            //   Host: "smtp.elasticemail.com",
+            //   Username: "team.creativemonk@gmail.com",
+            //   Password: "D1A332CCE6789B22FA17D1DE4F5E4FCB4C52",
+            //   To: "team.creativemonk@gmail.com",
+            //   From: "team.creativemonk@gmail.com",
+            //   Subject: `Query from ${name}`,
+            //   Body: emailBody,
+            // }).then(() => {
+            //   setShowLoading(false);
+            //   setFormSubmitted(true);
+            //   navigate("/message");
+            // });
           }
         })
         .catch((error) => console.log("error", error));

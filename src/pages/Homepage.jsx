@@ -177,18 +177,18 @@ let Homepage = () => {
               Phone Number: ${countryCallingCode} ${phoneNumber}<br>
               Price Range: From $120K USD to $ ${priceRange}K USD<br>
               `;
-            Email.send({
-              Host: "smtp.elasticemail.com",
-              Username: "team.creativemonk@gmail.com",
-              Password: "D1A332CCE6789B22FA17D1DE4F5E4FCB4C52",
-              To: "team.creativemonk@gmail.com",
-              From: "team.creativemonk@gmail.com",
-              Subject: `Query from ${name} (Landing Page)`,
-              Body: emailBody,
-            }).then(() => {
-              setShowLoading(false);
-              navigate("/message");
-            });
+            // Email.send({
+            //   Host: "smtp.elasticemail.com",
+            //   Username: "team.creativemonk@gmail.com",
+            //   Password: "D1A332CCE6789B22FA17D1DE4F5E4FCB4C52",
+            //   To: "team.creativemonk@gmail.com",
+            //   From: "team.creativemonk@gmail.com",
+            //   Subject: `Query from ${name} (Landing Page)`,
+            //   Body: emailBody,
+            // }).then(() => {
+            //   setShowLoading(false);
+            //   navigate("/message");
+            // });
           }
         })
         .catch((error) => console.log("error", error));
@@ -255,18 +255,18 @@ let Homepage = () => {
               Name: ${name2}<br>
               Phone Number: ${countryCallingCode2} ${phoneNumber2}<br>
               `;
-            Email.send({
-              Host: "smtp.elasticemail.com",
-              Username: "team.creativemonk@gmail.com",
-              Password: "D1A332CCE6789B22FA17D1DE4F5E4FCB4C52",
-              To: "team.creativemonk@gmail.com",
-              From: "team.creativemonk@gmail.com",
-              Subject: `Query from ${name} (Reach Out Section - Landing Page)`,
-              Body: emailBody,
-            }).then(() => {
-              setShowLoading(false);
-              navigate("/message");
-            });
+            // Email.send({
+            //   Host: "smtp.elasticemail.com",
+            //   Username: "team.creativemonk@gmail.com",
+            //   Password: "D1A332CCE6789B22FA17D1DE4F5E4FCB4C52",
+            //   To: "team.creativemonk@gmail.com",
+            //   From: "team.creativemonk@gmail.com",
+            //   Subject: `Query from ${name} (Reach Out Section - Landing Page)`,
+            //   Body: emailBody,
+            // }).then(() => {
+            //   setShowLoading(false);
+            //   navigate("/message");
+            // });
           }
         })
         .catch((error) => console.log("error", error));
