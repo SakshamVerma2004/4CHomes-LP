@@ -139,31 +139,31 @@ let Form = () => {
     }
   }, []);
 
-  let options = countryData
-    .map((country) => {
-      let suffixes = country.idd.suffixes ? country.idd.suffixes.join(" ") : "";
-      let iddRoot = country.idd.root ? `(${country.idd.root}${suffixes})` : "";
-      return {
-        value: country.name.common,
-        label: (
-          <div className={styles.countryOption}>
-            <img
-              src={country.flags.png}
-              alt={country.name.common}
-              style={{ width: "20px", marginRight: "5px" }}
-            />
-            {iddRoot} {country.name.common}
-          </div>
-        ),
-      };
-    })
-    .sort((a, b) => {
-      let nameA = a.value.toLowerCase();
-      let nameB = b.value.toLowerCase();
-      if (nameA < nameB) return -1;
-      if (nameA > nameB) return 1;
-      return 0;
-    });
+  // let options = countryData
+  //   ?.map((country) => {
+  //     let suffixes = country.idd.suffixes ? country.idd.suffixes.join(" ") : "";
+  //     let iddRoot = country.idd.root ? `(${country.idd.root}${suffixes})` : "";
+  //     return {
+  //       value: country.name.common,
+  //       label: (
+  //         <div className={styles.countryOption}>
+  //           <img
+  //             src={country.flags.png}
+  //             alt={country.name.common}
+  //             style={{ width: "20px", marginRight: "5px" }}
+  //           />
+  //           {iddRoot} {country.name.common}
+  //         </div>
+  //       ),
+  //     };
+  //   })
+  //   .sort((a, b) => {
+  //     let nameA = a.value.toLowerCase();
+  //     let nameB = b.value.toLowerCase();
+  //     if (nameA < nameB) return -1;
+  //     if (nameA > nameB) return 1;
+  //     return 0;
+  //   });
 
   useEffect(() => {
     if (showSuccessMessage) {
@@ -202,7 +202,7 @@ let Form = () => {
               />
               <div>
                 <Select
-                  options={options}
+                  // options={options}
                   className={styles.countrySelect}
                   placeholder="Select Country"
                   required
